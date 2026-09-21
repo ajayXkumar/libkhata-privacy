@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Lumina — Privacy Policy</title>
+<title>LibKhata — Privacy Policy</title>
 <style>
   :root { color-scheme: light; }
   body {
@@ -26,83 +26,181 @@
   h2 { font-size: 18px; margin: 32px 0 8px; }
   p, li { font-size: 15px; color: #1A1A1A; }
   .meta { color: #8E8E93; font-size: 13px; margin-bottom: 24px; }
-  ul { padding-left: 20px; }
-  code { background: #F5F6F8; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  ul, ol { padding-left: 20px; }
+  ol li { margin-bottom: 6px; }
   a { color: #1A1A1A; text-decoration: underline; }
   hr { border: 0; border-top: 1px solid #EEF0F4; margin: 32px 0; }
   footer { text-align: center; color: #8E8E93; font-size: 12px; margin-top: 24px; }
+  .identity {
+    background: #F5F6F8;
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 16px 0 24px;
+  }
+  .identity div { margin: 2px 0; font-size: 14px; }
+  .identity strong { display: inline-block; min-width: 150px; color: #8E8E93; font-weight: 500; }
 </style>
 </head>
 <body>
 <main>
+
   <h1>Privacy Policy</h1>
-  <p class="meta">Lumina · Effective 2 May 2026 · Last updated 2 May 2026</p>
+  <p class="meta">Effective 21 September 2026</p>
 
-  <p>This privacy policy describes how the Lumina mobile application (“Lumina”, “the app”, “we”) collects, uses, and protects your data. The app is operated by Ajay Kumar Saharan (contact: <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a>).</p>
+  <!--
+    This block exists because Google Play rejected an earlier version for
+    "App or developer details don't match". The policy must name the app and
+    the developer exactly as they appear on the Play store listing. Keep these
+    three lines identical to the Play Console entries.
+  -->
+  <div class="identity">
+    <div><strong>Application</strong> LibKhata</div>
+    <div><strong>Package name</strong> app.luminastudy.lumina</div>
+    <div><strong>Developer</strong> Ajay Kumar Saharan</div>
+    <div><strong>Contact</strong> <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a></div>
+  </div>
 
-  <h2>1. Information we collect</h2>
-  <p>We collect only the data needed to operate the app. Categories:</p>
+  <p>
+    This policy explains what the LibKhata mobile application, published on Google Play
+    by Ajay Kumar Saharan, collects and what is done with it. It applies to the
+    LibKhata Android app and to nothing else.
+  </p>
+
+  <p>
+    LibKhata is a record-keeping tool for the owner of a study hall or library. The person
+    who installs it — the hall owner — signs in and keeps a register of their members, the
+    fees those members pay, and the hall's own expenses. Members of the hall do not install
+    or sign in to the app; their details are entered by the owner.
+  </p>
+
+  <h2>1. What is collected</h2>
+
+  <p><strong>From the hall owner, when they sign in</strong></p>
   <ul>
-    <li><strong>Account identifiers</strong> — Google account email, display name, and Firebase user ID, captured when you sign in.</li>
-    <li><strong>Profile information</strong> — Name and phone number that you (or your library admin) enter while registering. For library members, an optional Aadhaar number can be stored by the library admin for verification. Only the last four digits are visible inside the student app.</li>
-    <li><strong>Activity data</strong> — Study session start/end times, durations, focus session notes you enter, attendance check-in/check-out times, daily goals, streak data, and aggregate stats used to power achievements and themes.</li>
-    <li><strong>Library context</strong> (library members only) — Library ID, seat assignment, plan, payment records, and any payment-receipt photo you (or your library admin) upload.</li>
-    <li><strong>Device data</strong> — Crash logs and diagnostic data collected by Firebase Crashlytics if a crash occurs. This includes device model, OS version, and a stack trace, attached to your Firebase user ID.</li>
+    <li>Google account email address and display name, through Google Sign-In</li>
+    <li>A Firebase account identifier created for that sign-in</li>
   </ul>
-  <p>We do <em>not</em> collect contacts, location, browsing history, photos outside of payment receipts you choose to upload, microphone audio, or advertising identifiers.</p>
 
-  <h2>2. How we use the information</h2>
+  <p><strong>Entered by the hall owner about their hall</strong></p>
   <ul>
-    <li>To authenticate you and keep you signed in across sessions.</li>
-    <li>To compute your study stats, attendance, streaks, achievements, and progress visualisations.</li>
-    <li>To let your library administrator manage seats, plans, payments, and broadcasts (library members only).</li>
-    <li>To diagnose crashes and improve stability.</li>
+    <li>Hall name, opening hours, number of seats, monthly fee</li>
+    <li>A UPI payment address, if the owner chooses to add one so members can pay</li>
   </ul>
-  <p>We do not use your data for advertising, profiling, or any third-party marketing.</p>
 
-  <h2>3. Where data is stored</h2>
-  <p>All server-side data is stored in Google Firebase (Cloud Firestore, Firebase Authentication, Firebase Storage, Firebase Crashlytics). Firebase is operated by Google LLC. Some data may also be cached locally on your device (AsyncStorage) so the app works offline.</p>
-  <p>Transit between the app and Firebase is encrypted via HTTPS/TLS.</p>
-
-  <h2>4. Sharing</h2>
-  <p>We do not sell, rent, or share your personal data with third parties for marketing. Limited sharing happens only:</p>
+  <p><strong>Entered by the hall owner about each member</strong></p>
   <ul>
-    <li>With your library administrator, who can see profile and activity data for students enrolled in their library. Standalone (no-library) users are not visible to any admin.</li>
-    <li>With Google Firebase as our infrastructure provider.</li>
-    <li>If required by law, valid legal process, or to protect against fraud or abuse.</li>
+    <li>Name and phone number</li>
+    <li>Seat number, joining date, and the date their fee is paid until</li>
+    <li>Payment records: amount, date, cash or UPI, and the period each payment covers</li>
+    <li>Expense records the owner keeps for the hall</li>
   </ul>
 
-  <h2>5. Data retention &amp; deletion</h2>
-  <p>You may request deletion of your account and all associated data at any time by emailing <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a> from the Google account linked to your profile. Within 30 days we will:</p>
+  <p><strong>Not collected.</strong> LibKhata does not collect location, contacts, photos,
+  audio, calendar data, installed-app lists, or advertising identifiers. It contains no
+  advertising and no third-party analytics or crash-reporting service.</p>
+
+  <h2>2. How it is used</h2>
   <ul>
-    <li>Delete your student/admin profile document.</li>
-    <li>Delete your study sessions, attendance records, goals, payments, achievements, and theme preferences.</li>
-    <li>Delete your Firebase Authentication record.</li>
+    <li>To sign the owner in and keep them signed in</li>
+    <li>To show the owner their own hall: who is due, what was collected, what was spent</li>
+    <li>To produce a payment receipt the owner can hand or send to a member</li>
+    <li>To let the owner open WhatsApp with a fee reminder already written</li>
   </ul>
-  <p>Crash diagnostic data older than 90 days is automatically purged by Firebase Crashlytics.</p>
+  <p>
+    Data is never used for advertising, never sold, and never shared for anyone else's
+    marketing.
+  </p>
 
-  <h2>6. Children</h2>
-  <p>The app is intended for users aged 13 and older. If you are under 13, please do not use Lumina. We do not knowingly collect data from children under 13.</p>
+  <h2>3. Where it is stored</h2>
+  <p>
+    All records are stored in Google Firebase (Firebase Authentication and Cloud Firestore),
+    operated by Google LLC. Traffic between the app and Firebase is encrypted in transit
+    using HTTPS/TLS. Firebase Security Rules scope every record to the hall it belongs to,
+    so one hall owner cannot read or change another hall's records.
+  </p>
 
-  <h2>7. Security</h2>
-  <p>We use Firebase Security Rules to ensure students can only access their own records, library admins can only access records inside their own library, and unauthenticated requests are rejected. Sign-in uses Google Identity Services with no password stored on our side.</p>
+  <h2>4. Who it is shared with</h2>
+  <ul>
+    <li><strong>Google Firebase</strong> — as the hosting and authentication provider</li>
+    <li><strong>Co-administrators</strong> — if the owner invites someone to help run the
+        hall, that person can see and edit the same hall records</li>
+    <li><strong>Nobody else</strong>, except where disclosure is required by law</li>
+  </ul>
+  <p>
+    Opening WhatsApp with a pre-written reminder hands that message to WhatsApp on the
+    owner's own device. What happens to it afterwards is governed by WhatsApp's own policy.
+    The app does not send anything to WhatsApp by itself.
+  </p>
+
+  <h2>5. Deleting your account and your data</h2>
+  <p>
+    You can delete everything from inside the app, and the deletion is immediate — there is
+    no waiting period and no request to approve.
+  </p>
+  <ol>
+    <li>Open LibKhata and sign in as the hall owner</li>
+    <li>Go to <strong>Setup</strong></li>
+    <li>Scroll to the bottom and tap <strong>Delete hall and account</strong></li>
+    <li>Read the confirmation, which names how many member and payment records will go,
+        and tap <strong>Delete everything</strong></li>
+  </ol>
+  <p>
+    This permanently removes every member record, every payment and expense, the hall's own
+    settings, any co-administrator access, and your Google sign-in for the app. It cannot be
+    undone.
+  </p>
+  <p>
+    Full instructions, including what to do if you can no longer sign in, are at
+    <a href="https://ajayxkumar.github.io/libkhata-privacy/delete-account.html">https://ajayxkumar.github.io/libkhata-privacy/delete-account.html</a>.
+    You may also write to
+    <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a> and the account will
+    be deleted within 30 days.
+  </p>
+
+  <h2>6. How long it is kept</h2>
+  <p>
+    Hall records are kept for as long as the owner keeps using the app, because the app's
+    purpose is to be a running register. They are removed as soon as the owner deletes the
+    hall as described above. There are no backups retained after deletion beyond Google
+    Firebase's own short-term operational backups.
+  </p>
+
+  <h2>7. Children</h2>
+  <p>
+    LibKhata is a tool for the person who runs a study hall and is intended for users aged 13
+    and over. It is not directed at children, and no data is knowingly collected from a child
+    under 13. A member whose name and phone number are entered by a hall owner does not use
+    the app themselves.
+  </p>
 
   <h2>8. Your rights</h2>
-  <ul>
-    <li><strong>Access</strong> — You can view your data inside the app at any time.</li>
-    <li><strong>Correction</strong> — Profile fields can be edited from your profile screen.</li>
-    <li><strong>Deletion</strong> — Email us as described in section 5.</li>
-    <li><strong>Portability</strong> — Email us and we will export your data as JSON.</li>
-  </ul>
+  <p>
+    You may see, correct, export, or delete your data. Seeing and correcting it is what the
+    app does; deleting it is described in section 5. For an export or any other request,
+    write to <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a>.
+  </p>
+  <p>
+    If you are a member of a hall rather than its owner and you want your details removed,
+    ask the hall owner, who can remove you from the app directly. You may also write to the
+    address above.
+  </p>
 
   <h2>9. Changes to this policy</h2>
-  <p>If this policy changes materially, we will update the “Last updated” date above and notify users in-app where appropriate. Continued use of the app after a change means you accept the updated policy.</p>
-
-  <h2>10. Contact</h2>
-  <p>For privacy questions or requests: <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a></p>
+  <p>
+    If this policy changes, the effective date at the top will change with it and the updated
+    policy will be posted at this address.
+  </p>
 
   <hr />
-  <footer>© 2026 Ajay Kumar Saharan · Lumina</footer>
+
+  <h2>Contact</h2>
+  <p>
+    Ajay Kumar Saharan<br />
+    <a href="mailto:ajaymatrix386@gmail.com">ajaymatrix386@gmail.com</a>
+  </p>
+
+  <footer>LibKhata · Ajay Kumar Saharan</footer>
+
 </main>
 </body>
 </html>
